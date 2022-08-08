@@ -7,7 +7,7 @@
 
 .hero_section{
     background: url(images/heroSectionBackground.png);
-    min-height: 60vh;
+    min-height: 62vh;
     background-size: cover;
     background-position: center;
     color: white;
@@ -24,6 +24,71 @@
     text-decoration: none;
     color: white;
 }
+
 .navbar_content_container{
     display: flex;
+    gap: 30px;
+    padding-right: 127px;
+    font-size: 18px;
 }
+
+.navbar_content_container .user_icon{
+    height: 30px;
+    width: 30px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100%;
+    display: none;
+    border: solid 1px white;
+    padding-left: 6px;
+}
+
+.hero_section_main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    height: calc(61vh - 60px);
+}
+
+.hero_section_logo{
+    width: 280px;
+    height: auto;
+}
+
+.hero_section_h1{
+    font-weight: 400;
+    font-size: 32px;
+}
+
+.hero_section_main .input_container{
+    display: flex;
+    background-color: white;
+    align-items: center;
+    justify-items: center;
+    gap: 10px;
+    width: 45%;
+    height: 12%;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.input_container_loc,
+.input_container_search{
+    padding: 5px;
+    border: none; 
+    order: none;
+}
+
+.input_container_loc{
+    padding-left: 20px;
+    width: 35%;
+    border-right: 2px solid #e0e0e0;
+}
+
+.input_container_search{
+    padding-left: 20px;
+    width: 65%;
+}
+
