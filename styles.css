@@ -83,12 +83,22 @@
 
 .input_container_loc{
     padding-left: 20px;
-    width: 35%;
+    width: 30%;
     border-right: 2px solid #e0e0e0;
 }
 
 .input_container_search{
     padding-left: 20px;
     width: 65%;
+}
+
+.input_container > .input{
+    position: relative;
+}
+
+.input_container>i{
+    position: absolute;
+    z-index: 2;
+    padding-left: 3px;
 }
 
