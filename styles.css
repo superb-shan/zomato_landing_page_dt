@@ -1,3 +1,7 @@
+body::-webkit-scrollbar {
+  display: none;
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -234,6 +238,9 @@
     display: flex;
   }
 
+  .navbar_content_container {
+    padding: 0;
+  }
   .content {
     display: none;
   }
@@ -246,7 +253,7 @@
     min-height: 80vh;
   }
 
-  .hero_section_main .input_container {
+  .hero_section_main .input__container {
     flex-direction: column;
     background-color: transparent;
     width: 100%;
@@ -259,7 +266,7 @@
     width: 95%;
   }
 
-  .input_container > i {
+  .input__container > i {
     display: none;
   }
 
@@ -280,6 +287,61 @@
   .collections .sub_heading_container {
     margin-left: 100px;
   }
+}
+
+.popular_locations {
+  padding-left: 150px;
+  padding-right: 150px;
+  width: 100%;
+}
+
+.popular_locations h1 {
+  font-weight: 300;
+  font-size: 2rem;
+}
+
+.popular_locations h1 b {
+  font-weight: 400;
+}
+
+.locations_container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  width: 100%;
+  gap: 1rem;
+  padding: 3rem 0;
+}
+
+.location {
+  display: flex;
+  border: 1px solid lightgray;
+  width: 100%;
+  border-radius: 10px;
+  padding: 0.5rem;
+  align-items: center;
+  /* justify-content: space-between; */
+  box-shadow: 0 0.5px 1px 0px lightgray;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.location:hover {
+  box-shadow: 1.7px 1.7px 10px 0px lightgray;
+}
+
+.location .loc_left {
+  margin-left: 0.5rem;
+}
+
+.loc_left h2 {
+  font-size: 1.2rem;
+  font-weight: 300;
+}
+
+.location i {
+  margin-left: auto;
+  margin-right: 0.5rem;
+  color: #6f7373;
 }
 
 .get_the_app {
@@ -526,6 +588,11 @@
     margin: 3rem 0px;
   }
 
+  .popular_locations {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+
   .footer {
     padding-left: 50px;
     padding-right: 50px;
@@ -551,11 +618,19 @@
   .navigation_container {
     grid-template-columns: repeat(3, 1fr);
   }
+
+  .locations_container {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 @media only screen and (max-width: 600px) {
   .navigation_container {
     grid-template-columns: 1fr 1fr;
+  }
+
+  .locations_container {
+    grid-template-columns: repeat(1, 1fr);
   }
 }
 
