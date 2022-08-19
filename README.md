@@ -1,1 +1,2 @@
-#This is a zomato landing page clone
+#This is a zomato landing page clone...
+Made with HTML and CSS only with many enhancesments to the original site.
