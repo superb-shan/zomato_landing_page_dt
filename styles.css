@@ -149,7 +149,6 @@ body::-webkit-scrollbar {
 }
 
 .collections h1 {
-  font-weight: 600;
   margin-left: 150px;
   margin-right: 150px;
 }
@@ -184,6 +183,7 @@ body::-webkit-scrollbar {
   background-position: center;
   border-radius: 10px;
   position: relative;
+  cursor: pointer;
 }
 
 .card1 {
@@ -251,6 +251,7 @@ body::-webkit-scrollbar {
 
   .hero_section {
     min-height: 80vh;
+    padding-right: 20px;
   }
 
   .hero_section_main .input__container {
@@ -285,7 +286,12 @@ body::-webkit-scrollbar {
   }
 
   .collections .sub_heading_container {
-    margin-left: 100px;
+    margin-left: 50px;
+  }
+
+  .collections .sub_heading_container span:nth-child(2) {
+    padding-right: 0px;
+    padding-left: 10px;
   }
 }
 
@@ -295,7 +301,9 @@ body::-webkit-scrollbar {
   width: 100%;
 }
 
-.popular_locations h1 {
+.popular_locations h1,
+.explore h1,
+.collections h1 {
   font-weight: 300;
   font-size: 2rem;
 }
@@ -312,14 +320,14 @@ body::-webkit-scrollbar {
   padding: 3rem 0;
 }
 
-.location {
+.location,
+.exp_content {
   display: flex;
   border: 1px solid lightgray;
   width: 100%;
   border-radius: 10px;
   padding: 0.5rem;
   align-items: center;
-  /* justify-content: space-between; */
   box-shadow: 0 0.5px 1px 0px lightgray;
   transition: 0.3s;
   cursor: pointer;
@@ -338,7 +346,8 @@ body::-webkit-scrollbar {
   font-weight: 300;
 }
 
-.location i {
+.location i,
+.exp_content i {
   margin-left: auto;
   margin-right: 0.5rem;
   color: #6f7373;
@@ -458,7 +467,33 @@ body::-webkit-scrollbar {
   cursor: pointer;
 }
 
+.explore {
+  width: 100%;
+  padding-left: 200px;
+  padding-right: 200px;
+}
+
+.explore_container {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  width: 90%;
+  margin: auto;
+  gap: 1rem;
+  padding: 3rem 0;
+}
+
+.exp_content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 70px;
+  box-shadow: 0 0.3px 1px 0px rgb(221, 221, 221);
+  padding: 20px;
+}
+
 .footer {
+  /*   padding-top: 50px;
+  background-color: rgb(247, 246, 246); */
   width: 100%;
   padding-left: 150px;
   padding-right: 150px;
@@ -554,6 +589,7 @@ body::-webkit-scrollbar {
 
 .footer_sec_logo {
   width: 65%;
+  cursor: pointer;
 }
 
 .disclaimer {
@@ -576,6 +612,11 @@ body::-webkit-scrollbar {
 }
 
 @media only screen and (max-width: 900px) {
+  .hero_section {
+    padding-left: 10px;
+    padding-right: 20px;
+  }
+
   .get_the_app {
     padding: 2rem;
   }
@@ -588,12 +629,17 @@ body::-webkit-scrollbar {
     margin: 3rem 0px;
   }
 
-  .popular_locations {
+  .popular_locations,
+  .footer,
+  .explore {
+    /*    align-items: center;
+    justify-content: center; */
     padding-left: 50px;
     padding-right: 50px;
   }
-
-  .footer {
+  .sub_heading_container span {
+    margin-left: 0;
+    margin-right: 0;
     padding-left: 50px;
     padding-right: 50px;
   }
